@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #111;
+  background: url('svgs/background.svg') #edeff0;
+  background-size: 53px 50px;
+}
+
+#container {
+  max-width: 960px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+p {
+  max-width: 350px;
+  margin: 35px auto 0;
+  line-height: 2em;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #39add1;
+  font-weight: 700;
+  }
+  a:hover {
+    color: #111;
+  }
+
+.name {
+  display: none;
+}
+
+header {
+  padding-top: 10px;
+}
+  header nav {
+    padding-bottom: 50px;
+    text-align: left;
+  }
+  header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  header h1 {
+    line-height: 1em;
+  }
+
+main {
+  padding-top: 50px;
+}
+  main h2 {
+  font-size: 28px;
+}
+  main ul {
+    padding: 0;
+  }
+    main li {
+      display: inline-block;
+      color: #ba8058;
+      margin-right: 20px;
+    }
+      main li img {
+        margin-bottom: 15px;
+      }
+      main li span {
+        margin-left: -40px;
+      }
+      main li:last-child {
+        margin-right: 0;
+      }
+
+footer {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  color: #ba8058;
+}
+
+/****** SVG *******/
+
+.logo {
+  width: 25%;
+}
+
+.dog {
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+.nav-svg {
+  width: 25px;
+  height: 25px;
+}
+
+.st-nav0:hover {
+  fill: #111;
+  }
+
+/* RED DOG */
+.red0 {
+  fill:#BA8058;
+}
+
+.red1 {
+  fill:#FBFEFF;
+}
+
+.red2 {
+  fill:#2D3339;
+}
+
+.red3 {
+  fill:#EAAA7F;
+}
+
+/* FAWN DOG */
+.fawn0 {
+  fill:#EAAA7F;
+}
+
+.fawn1 {
+  fill:#FBFEFF;
+}
+
+.fawn2 {
+  fill:#2D3339;
+}
+
+.fawn3 {
+  fill:#F4C6A6;
+}
+
+/* SABLE DOG */
+.sable0 {
+  fill: #844B24;
+}
+
+.sable1 {
+  fill:#FBFEFF;
+}
+
+.sable2 {
+  fill:#2D3339;
+}
+
+.sable3 {
+  fill:#BA8058;
+}
+
+/* BT DOG */
+.bt0 {
+  fill:#BA8058;
+}
+
+.bt1 {
+  fill:#52595F;
+}
+
+.bt2 {
+  fill:#FBFEFF;
+}
+
+.bt3 {
+  fill:#2D3339;
+}
+
+/* SVG ANIMATION */
+
+/****Keyframes****/
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+}
+
+
+@keyframes eyes {
+  0% {
+    transform: translate3d(0,10px,0)
+  }
+  30% {
+    transform: translate3d(0,-10px,0)
+  }
+  60% {
+    transform: translate3d(0,0,0)
+  }
+}
+
+@keyframes noses {
+  0% {
+    transform: translate3d(0,10px,0)
+  }
+  10% {
+    transform: translate3d(0,0,0)
+  }
+  20% {
+    transform: translate3d(0,-10px,0)
+  }
+  30% {
+    transform: translate3d(0,0,0)
+  }
+  40% {
+    transform: translate3d(0,10px,0)
+  }
+  50% {
+    transform: translate3d(0,0,0)
+  }
+  60% {
+    transform: translate3d(0,-10px,0)
+  }
+  70% {
+    transform: translate3d(0,0,0)
+  }
+  80% {
+    transform: translate3d(0,10px,0)
+  }
+  90% {
+    transform: translate3d(0,0,0)
+  }
+}
+
+
+
+/****SVG Animation ****/
+.nav-svg *,
+.dog *,
+.st2 * {
+  transform-origin: 50% 50%;
+}
+
+.nav-svg {
+  animation: grow 1s ease-out backwards;
+}
+
+.st2 {
+  animation: grow 1s ease-out backwards;
+}
+
+.eyebrows {
+  animation: eyes .5s 4s ease-out forwards;
+}
+
+.nose {
+  animation: noses 1s 4.5s ease-out forwards;
+}
+
+
+/****** Media Queries ******/
+@media (max-width: 419px) {
+  #text {
+    display: none;
+  }
+
+  .name {
+    display: block;
+  }
+
+  .dog {
+    width: 75px;
+  } 
+}
